@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1091813CD3EFF596A5E6A1C3 /* Pods_searchWord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5CB9AF0FD0754F94E470C9 /* Pods_searchWord.framework */; };
 		F6808BDF21FDF7740072E81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6808BDE21FDF7740072E81C /* AppDelegate.swift */; };
 		F6808BE121FDF7740072E81C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6808BE021FDF7740072E81C /* ViewController.swift */; };
 		F6808BE421FDF7740072E81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6808BE221FDF7740072E81C /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131BBCCE2FD29B1952E91C33 /* Pods-searchWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-searchWord/Pods-searchWord.debug.xcconfig"; sourceTree = "<group>"; };
+		6A5CB9AF0FD0754F94E470C9 /* Pods_searchWord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_searchWord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		774BBE2AF99AE0F410FABFC9 /* Pods-searchWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-searchWord/Pods-searchWord.release.xcconfig"; sourceTree = "<group>"; };
 		F6808BDB21FDF7740072E81C /* searchWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = searchWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6808BDE21FDF7740072E81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6808BE021FDF7740072E81C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1091813CD3EFF596A5E6A1C3 /* Pods_searchWord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E746AE8E0285831D5E2F46C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A5CB9AF0FD0754F94E470C9 /* Pods_searchWord.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97FC9EC1987DF8F1122E2117 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				131BBCCE2FD29B1952E91C33 /* Pods-searchWord.debug.xcconfig */,
+				774BBE2AF99AE0F410FABFC9 /* Pods-searchWord.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F6808BD221FDF7740072E81C = {
 			isa = PBXGroup;
 			children = (
 				F6808BDD21FDF7740072E81C /* searchWord */,
 				F6808BDC21FDF7740072E81C /* Products */,
+				97FC9EC1987DF8F1122E2117 /* Pods */,
+				2E746AE8E0285831D5E2F46C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6808BF021FDF7750072E81C /* Build configuration list for PBXNativeTarget "searchWord" */;
 			buildPhases = (
+				3B72E6E50E6AAEEA519F8B26 /* [CP] Check Pods Manifest.lock */,
 				F6808BD721FDF7740072E81C /* Sources */,
 				F6808BD821FDF7740072E81C /* Frameworks */,
 				F6808BD921FDF7740072E81C /* Resources */,
+				EC2505C004575AC98DA61DE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B72E6E50E6AAEEA519F8B26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-searchWord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2505C004575AC98DA61DE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-searchWord/Pods-searchWord-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-searchWord/Pods-searchWord-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6808BD721FDF7740072E81C /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		F6808BF121FDF7750072E81C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131BBCCE2FD29B1952E91C33 /* Pods-searchWord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +376,7 @@
 		};
 		F6808BF221FDF7750072E81C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 774BBE2AF99AE0F410FABFC9 /* Pods-searchWord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
